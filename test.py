@@ -1,3 +1,4 @@
+#斐波那契数列
 def fib2(n):
     result = []
     a, b = 0, 1
