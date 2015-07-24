@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 #斐波那契数列
 def fib2(n):
     result = []
