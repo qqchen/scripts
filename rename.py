@@ -17,7 +17,7 @@ prefix = ''
 if len(sys.argv) == 3:
     prefix = sys.argv[2]
 
-imgtype = ['png','jpg','bmp','tif','ppm','gif']
+imgtype = ['png','jpg','bmp','tif','ppm','gif', 'PNG']
 index = 1
 if os.path.isdir(path):    
     for oldname in os.listdir(path) :
