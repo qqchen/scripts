@@ -27,6 +27,7 @@ print path
 
 output_object = open('filepath.txt', 'w')
 
+"""
 if os.path.isdir(path):
 	for filename in os.listdir(path):
 		filepath = os.path.join(path, filename)
@@ -42,3 +43,72 @@ if os.path.isdir(path):
 			#output_object.write(os.path.join(path, filename) + '\r\n')
 
 output_object.close()
+"""
+
+if os.path.isdir(path):
+	for filename in os.listdir(path):
+		print filename
+		filepath = os.path.join(path, filename)
+		if os.path.isdir(filepath):
+			for file in os.listdir(filepath):
+				output_object.write(filename + ':')
+				# linux
+				#output_object.write(os.path.join(filepath, file))
+				#output_object.write('\n')
+
+				#win
+				win_path = os.path.join(filepath, file)
+				for c in win_path :
+					if c == '\\' :
+						output_object.write('\\' + c)
+					elif c == ' ':
+						output_object.write('%20')
+					else:
+						output_object.write(c)
+				output_object.write('\n')
+output_object.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
