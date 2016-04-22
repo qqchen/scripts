@@ -114,9 +114,17 @@ res_list.sort(key=lambda x : x[4], reverse=True)
 
 output_object.write("error : right\n")
 
+def write_file(item):
+	line = item[0] + " : " + item[1] + " ; " + item[2] + " : " + item[3] + " ; " + str(item[4])
+	output_object.write(line + '\n')
+
+map(write_file, res_list)
+
+"""
 for x in range(len(res_list)):
 	print res_list[x]
 	line = res_list[x][0] + " : " + res_list[x][1] + " ; " + res_list[x][2] + " : " + res_list[x][3] + " ; " + str(res_list[x][4])
 	output_object.write(line + '\n')
+"""
 output_object.close()
 print 'done!'
